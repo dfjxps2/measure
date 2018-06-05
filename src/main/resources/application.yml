@@ -1,0 +1,10 @@
+logging:
+  config: classpath:log4j2.xml
+
+spring:
+  datasource:
+     url: jdbc:oracle:thin:@10.1.3.180:1521:ORCL
+     username: bsc_emp_lh
+     password: bsc_emp_lh
+     driver-class-name: oracle.jdbc.driver.OracleDriver
+
