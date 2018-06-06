@@ -21,7 +21,7 @@ public interface MeaMapper {
     public List<Map<String,Object>> reBscMea();
 
     //返回根据基础指标中的parent_measure_id为measure_id指标值
-    @Select("select measure_name,formula_desc,measure_id from bsc_measure where parent_measure_id =#{meaId}")
+    @Select("select measure_name,formula_desc,measure_id,measure_desc from bsc_measure where parent_measure_id =#{meaId}")
     public List<Map<String,Object>> reMeaName(@Param("meaId") String meaId);
     //select measure_name,formula_desc,measure_id from bsc_measure where source_id is not null and parent_measure_id =#{meaId}
 
