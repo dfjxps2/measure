@@ -82,7 +82,7 @@ public class MeaServiceImpl implements MeaService {
             //map1.put("formula_desc",((String)map.get("FORMULA_DESC")).substring(1,((String)map.get("FORMULA_DESC")).length()-1));
             map1.put("measure_id",map.get("MEASURE_ID"));
             map1.put("measure_name",map.get("MEASURE_NAME"));
-            map1.put("measure_desc",map.get("MEASURE_DESC"));
+            map1.put("measure_unit",map.get("MEASURE_DESC"));
             //根据数据库的数据判断指标时间粒度
             if (1==this.meaMapper.reDim((String)map.get("MEASURE_ID")).size()){
                 if (4 == this.meaMapper.reDim((String) map.get("MEASURE_ID")).get(0)){
