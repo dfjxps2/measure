@@ -19,6 +19,24 @@ public class MainsiteErrorController implements ErrorController{
     private static final String ERROR_PATH = "/error";
 
     @ResponseBody
+    @RequestMapping(value = ERROR_PATH)
+    public DataResult handleError(HttpServletResponse response){
+        DataResult rs = new DataResult();
+        if(response.getStatus() == 404){
+            rs.setCode(0);
+            rs.setError("请求路径有误");
+        }
+        if(response.getStatus() == 500){
+            rs.setCode(0);
+            rs.setError("服务器内部出错");
+        }
+
+        return rs;
+    }
+
+/*
+    改动前的备份
+    @ResponseBody
     @RequestMapping(value=ERROR_PATH)
     public Map handleError(HttpServletResponse response){
         Map<String,Object> map = new HashMap();
@@ -30,7 +48,7 @@ public class MainsiteErrorController implements ErrorController{
             map.put("return_code","-2");
         }
         return map;
-    }
+    }*/
 
 /*    @ResponseBody
     @RequestMapping(value=ERROR_PATH)

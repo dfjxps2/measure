@@ -169,16 +169,7 @@ public class MeaServiceImpl implements MeaService {
     //
     @Override
     public Map<String, Object> reMeaSourceJson(String[] meaId,String from,String to) {
-        if (meaId==null|| meaId.length==0){
-            Map<String,Object> map = new HashMap();
-            map.put("return_code","-2");
-            return map;
-        }else if(from.length()!=to.length()){
-            Map<String,Object> map = new HashMap();
-            map.put("return_code","-2");
-            return map;
-        }
-        //根据起止时间的长度来判断查询是四位时间段还是六位的时间段
+        //根据起始时间的长度来判断查询是四位时间段还是六位的时间段
         int length = from.length();
         //最外层
         Map map2 = new HashMap();
@@ -197,7 +188,6 @@ public class MeaServiceImpl implements MeaService {
             //当条件有误导致没有返回数据的时候 则返回如下信息
             if(list.size()==0){
                 Map<String,Object> map = new HashMap();
-                map.put("return_code","-2");
                 return map;
             }
             //最里层数据List<map>
@@ -227,7 +217,7 @@ public class MeaServiceImpl implements MeaService {
         }
         //最外层是一层Map
         //Map map2 = new HashMap();
-        map2.put("return_code" ,"0");
+        //map2.put("return_code" ,"0");
         map2.put("measure",list3);
 
         return map2;
