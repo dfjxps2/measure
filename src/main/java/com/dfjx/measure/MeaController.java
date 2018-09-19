@@ -1,6 +1,8 @@
 package com.dfjx.measure;
 
 import oracle.net.aso.n;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,6 +22,8 @@ import java.util.*;
 @RestController
 @RequestMapping("/services")
 public class MeaController {
+
+    Logger logger = LoggerFactory.getLogger(MeaController.class);
 
     @Resource(name = "MeaService")
     private MeaService meaService;
@@ -52,7 +56,6 @@ public class MeaController {
      * @return 结果包在DataResult的Data数据中
      */
     @RequestMapping("/reMeaSys")
-    @ResponseBody
     public DataResult reMea(){
         DataResult rs = new DataResult();
         rs.setOk("OK");
@@ -85,6 +88,8 @@ public class MeaController {
         //此处为逻辑处理 from如果为空就不进行查询
         if (from==null|| from==" "||"null".equals(from)){
             rs.setError("起始时间不能为空");
+            logger.info(rs.getMsg()+
+                    new SimpleDateFormat("yyyymmdd-HH:MM:SS").format(new Date()));
             return rs;
         }else if(from.length()!=to.length()){
             if (from.length()<=4){
@@ -99,16 +104,22 @@ public class MeaController {
                 to = new SimpleDateFormat("yyyyMM").format(new Date());
             }else {
                 rs.setError("你输入的条件不符合规范");
+                logger.info(rs.getMsg()+
+                        new SimpleDateFormat("yyyymmdd-HH:MM:SS").format(new Date()));
                 return rs;
             }
         }
         if (meaId==null|| meaId.length==0){
             rs.setError("请输入你要查询的指标");
+            logger.info(rs.getMsg()+
+                    new SimpleDateFormat("yyyymmdd-HH:MM:SS").format(new Date()));
             return rs;
         }
 
         rs.setOk("OK");
         rs.setData(meaService.reMeaSourceJson(meaId,from,to));
+        logger.info(rs.getMsg()+
+                new SimpleDateFormat("yyyymmdd-HH:MM:SS").format(new Date()));
         return rs;
     }
 
@@ -150,4 +161,22 @@ public class MeaController {
         //return meaService.reMeaSource("C40003","2016");
         return null;
     }
+
+    @RequestMapping("/reLog")
+    public String reLog(){
+        System.out.println("reLog方法被调用");
+        return "ok";
+    }
+
+/*    @RequestMapping
+    public String edit(){
+
+        return "edit";
+    }
+
+    @RequestMapping
+    public String adda(){
+
+        return "add";
+    }*/
 }

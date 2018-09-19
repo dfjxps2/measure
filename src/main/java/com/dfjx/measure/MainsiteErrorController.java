@@ -1,11 +1,15 @@
 package com.dfjx.measure;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +22,8 @@ public class MainsiteErrorController implements ErrorController{
 
     private static final String ERROR_PATH = "/error";
 
+    Logger logger = LoggerFactory.getLogger(MainsiteErrorController.class);
+
     @ResponseBody
     @RequestMapping(value = ERROR_PATH)
     public DataResult handleError(HttpServletResponse response){
@@ -29,8 +35,10 @@ public class MainsiteErrorController implements ErrorController{
         if(response.getStatus() == 500){
             rs.setCode(0);
             rs.setError("服务器内部出错");
-        }
 
+        }
+        logger.info(rs.getMsg()+
+                new SimpleDateFormat("yyyymmdd-HH:MM:SS").format(new Date()));
         return rs;
     }
 

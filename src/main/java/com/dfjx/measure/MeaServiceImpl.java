@@ -167,6 +167,7 @@ public class MeaServiceImpl implements MeaService {
 
 
     //
+    /* 2018.9.19修改前的原来方法
     @Override
     public Map<String, Object> reMeaSourceJson(String[] meaId,String from,String to) {
         //根据起始时间的长度来判断查询是四位时间段还是六位的时间段
@@ -212,6 +213,64 @@ public class MeaServiceImpl implements MeaService {
                 System.out.println(list.get(0).get("MEASURE_NAME"));
                 map1.put("measures", list0.get(i));
                 list3.add(map1);
+
+            System.out.println(list0.size());
+        }
+        //最外层是一层Map
+        //Map map2 = new HashMap();
+        //map2.put("return_code" ,"0");
+        map2.put("measure",list3);
+
+        return map2;
+    }*/
+    @Override
+    public Map<String, Object> reMeaSourceJson(String[] meaId,String from,String to) {
+        //根据起始时间的长度来判断查询是四位时间段还是六位的时间段
+        int length = from.length();
+        //最外层
+        Map map2 = new HashMap();
+        //第二层数据
+        List<Map<String,Object>> list3 = new LinkedList<>();
+        // Map map1 = new HashMap();
+
+        //最内层数据封装类 将最内层的List<Map>装到一个List中
+        List<List<Map<String,Object>>> list0 = new LinkedList<>();
+        //中间层数据封装类
+        List<List<Map<String,Object>>> list01 = new LinkedList<>();
+        for (int i=0;i<meaId.length;i++){
+            //源数据
+            List<Map<String,Object>> list = meaMapper.reMeaSource(meaId[i],from,to,length);
+
+            //当条件有误导致没有返回数据的时候 则返回如下信息
+            if(list.size()==0){
+                Map<String,Object> map = new HashMap();
+                map.put("MEASURE_NAME","这个指标没有数据");
+                list.add(map);
+                list0.add(new LinkedList());
+            }else {
+                //最里层数据List<map>
+                List<Map<String,Object>> list1 = new LinkedList<>();
+                for(Map m:list){
+                    Map map = new HashMap();
+                    map.put("object_id",m.get("OBJECT_ID"));
+                    map.put("object_name",m.get("OBJECT_NAME"));
+                    map.put("month_id",m.get("MONTH_ID"));
+                    map.put("value",m.get("VALUE"));
+                    list1.add(map);
+                }
+                list0.add(list1);
+            }
+
+            //第二层也是List<Map>
+            //List<Map<String,Object>> list3 = new LinkedList<>();
+            //Map map1 = new HashMap();
+
+            Map map1 = new HashMap();
+            map1.put("measure_id", meaId[i]);
+            map1.put("measure_name", list.get(0).get("MEASURE_NAME"));
+            System.out.println(list.get(0).get("MEASURE_NAME"));
+            map1.put("measures", list0.get(i));
+            list3.add(map1);
 
             System.out.println(list0.size());
         }
