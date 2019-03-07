@@ -43,4 +43,6 @@ public interface MeaService {
     //按规格返回指标体系
     List<Map<String,Object>> reMeaSystem();
 
+    List<MeasureEntity> reMea1();
+
 }

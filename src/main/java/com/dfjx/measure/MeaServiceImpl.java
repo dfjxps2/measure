@@ -1,6 +1,7 @@
 package com.dfjx.measure;
 
 import javafx.beans.binding.ObjectExpression;
+import org.apache.ibatis.jdbc.Null;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -83,6 +84,7 @@ public class MeaServiceImpl implements MeaService {
             map1.put("measure_id",map.get("MEASURE_ID"));
             map1.put("measure_name",map.get("MEASURE_NAME"));
             map1.put("measure_unit",map.get("MEASURE_DESC"));
+            map1.put("measure_source_id",map.get("DATA_COL_SRC_FLAG"));
             //根据数据库的数据判断指标时间粒度
             if (1==this.meaMapper.reDim((String)map.get("MEASURE_ID")).size()){
                 if (4 == this.meaMapper.reDim((String) map.get("MEASURE_ID")).get(0)){
@@ -428,4 +430,29 @@ public class MeaServiceImpl implements MeaService {
         }
         return  null;
     }
+
+    //获取根节点数据
+    public List getChild(List<String> measureId){
+        List<List<Map>> list0 = new LinkedList();
+        //获取root节点的measure_id
+        for(String m : measureId){
+            List<String> rootData = meaMapper.reRootData(m);
+            //查看这个节点下是否还有子节点数据
+            for (String s : rootData) {
+                List<String> childData = meaMapper.reRootData(s);
+                if (childData != null) {
+                    getChild(childData);
+                }
+                return null;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public List<MeasureEntity> reMea1(){
+
+        return meaMapper.reMeasure();
+    }
+
 }

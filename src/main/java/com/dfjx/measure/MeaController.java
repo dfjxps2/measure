@@ -28,6 +28,12 @@ public class MeaController {
     @Resource(name = "MeaService")
     private MeaService meaService;
 
+    @Resource(name = "JsonTree")
+    private JsonTree jsonTree;
+
+    @Resource
+    private MeaMapper meaMapper;
+
     @RequestMapping(value = "/reCol")
     public List<Map<String,Object>> reCol(){
         List<Map<String,Object>> list = meaService.reBscMea();
@@ -37,6 +43,13 @@ public class MeaController {
         return meaService.reBscMea();
     }
 
+    @RequestMapping(value = "testRe")
+    public String testRe(){
+        //List<MeasureEntity> list = meaService.reMea1();
+        List<String> list = meaMapper.reTime();
+        //jsonTree.aga();
+        return "1";
+    }
 
     public List<Map<String,Object>> reMeaName(String meaName) {
 
@@ -59,7 +72,8 @@ public class MeaController {
     public DataResult reMea(){
         DataResult rs = new DataResult();
         rs.setOk("OK");
-        rs.setData(meaService.reMea());
+        //rs.setData(meaService.reMea());
+        rs.setData(jsonTree.aga());
         return rs;
     }
 

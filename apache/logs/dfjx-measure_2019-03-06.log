@@ -1,0 +1,192 @@
+2019-03-06 09:12:42,219  INFO Application:29 - springBoot容器启动20191206-09:03:219
+2019-03-06 09:12:43,094  INFO Application:48 - Starting Application on DESKTOP-8190VH1 with PID 9724 (C:\Users\Sc\Documents\GitHub\measure\target\classes started by Sc in C:\Users\Sc\Documents\GitHub\measure)
+2019-03-06 09:12:43,094  INFO Application:593 - No active profile set, falling back to default profiles: default
+2019-03-06 09:12:43,531  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-06 09:12:43,843  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 09:12:43 CST 2019]; root of context hierarchy
+2019-03-06 09:12:44,984  INFO AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-06 09:12:45,812  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8082 (http)
+2019-03-06 09:12:45,875  INFO StandardService:179 - Starting service [Tomcat]
+2019-03-06 09:12:45,875  INFO StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-03-06 09:12:46,124  INFO [/]:179 - Initializing Spring embedded WebApplicationContext
+2019-03-06 09:12:46,124  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2312 ms
+2019-03-06 09:12:46,421  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-06 09:12:46,421  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-06 09:12:46,421  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-06 09:12:46,421  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-06 09:12:46,421  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-06 09:12:46,421  INFO FilterRegistrationBean:258 - Mapping filter: 'originFilter' to: [/*]
+2019-03-06 09:12:47,889  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 09:12:43 CST 2019]; root of context hierarchy
+2019-03-06 09:12:47,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MainsiteErrorController.handleError(javax.servlet.http.HttpServletResponse)
+2019-03-06 09:12:47,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/test]}" onto public java.lang.String com.dfjx.measure.MeaController.test()
+2019-03-06 09:12:47,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reLog]}" onto public java.lang.String com.dfjx.measure.MeaController.reLog()
+2019-03-06 09:12:47,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/meaTest]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reMeaSourceTest()
+2019-03-06 09:12:47,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/measures]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMeaSource(java.lang.String[],java.lang.String,java.lang.String)
+2019-03-06 09:12:47,983  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reCol]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reCol()
+2019-03-06 09:12:47,983  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reMeaSys]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMea()
+2019-03-06 09:12:48,014  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 09:12:48,014  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 09:12:48,061  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 09:12:48,124  WARN AbstractTemplateResolverConfiguration:60 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-06 09:12:48,780  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-03-06 09:12:48,905  INFO Http11NioProtocol:179 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-03-06 09:12:49,014  INFO Http11NioProtocol:179 - Starting ProtocolHandler ["http-nio-8082"]
+2019-03-06 09:12:49,030  INFO NioSelectorPool:179 - Using a shared selector for servlet write/read
+2019-03-06 09:12:49,045  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8082 (http)
+2019-03-06 09:12:49,061  INFO Application:57 - Started Application in 6.638 seconds (JVM running for 11.135)
+2019-03-06 09:15:15,747  INFO [/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-06 09:15:15,747  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-06 09:15:15,769  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2019-03-06 09:15:16,954  INFO MeaController:121 - OK20191506-09:03:954
+2019-03-06 09:15:30,840  INFO MeaController:121 - OK20191506-09:03:840
+2019-03-06 10:18:41,259  INFO Application:29 - springBoot容器启动20191806-10:03:258
+2019-03-06 10:18:41,817  INFO Application:48 - Starting Application on DESKTOP-8190VH1 with PID 21088 (C:\Users\Sc\Documents\GitHub\measure\target\classes started by Sc in C:\Users\Sc\Documents\GitHub\measure)
+2019-03-06 10:18:41,818  INFO Application:593 - No active profile set, falling back to default profiles: default
+2019-03-06 10:18:42,207  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:18:42 CST 2019]; root of context hierarchy
+2019-03-06 10:18:42,215  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-06 10:18:43,298  INFO AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-06 10:18:43,943  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8082 (http)
+2019-03-06 10:18:43,953  INFO StandardService:179 - Starting service [Tomcat]
+2019-03-06 10:18:43,954  INFO StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-03-06 10:18:44,055  INFO [/]:179 - Initializing Spring embedded WebApplicationContext
+2019-03-06 10:18:44,055  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1852 ms
+2019-03-06 10:18:44,199  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-06 10:18:44,204  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-06 10:18:44,204  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-06 10:18:44,204  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-06 10:18:44,204  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-06 10:18:44,205  INFO FilterRegistrationBean:258 - Mapping filter: 'originFilter' to: [/*]
+2019-03-06 10:18:44,819  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:18:42 CST 2019]; root of context hierarchy
+2019-03-06 10:18:44,896  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MainsiteErrorController.handleError(javax.servlet.http.HttpServletResponse)
+2019-03-06 10:18:44,899  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/test]}" onto public java.lang.String com.dfjx.measure.MeaController.test()
+2019-03-06 10:18:44,900  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reLog]}" onto public java.lang.String com.dfjx.measure.MeaController.reLog()
+2019-03-06 10:18:44,900  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reMeaSys]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMea()
+2019-03-06 10:18:44,901  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/meaTest]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reMeaSourceTest()
+2019-03-06 10:18:44,901  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reCol]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reCol()
+2019-03-06 10:18:44,902  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/measures]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMeaSource(java.lang.String[],java.lang.String,java.lang.String)
+2019-03-06 10:18:44,934  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:18:44,935  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:18:44,977  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:18:45,012  WARN AbstractTemplateResolverConfiguration:60 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-06 10:18:45,519  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-03-06 10:18:45,541  INFO Http11NioProtocol:179 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:18:45,550  INFO Http11NioProtocol:179 - Starting ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:18:45,669  INFO NioSelectorPool:179 - Using a shared selector for servlet write/read
+2019-03-06 10:18:45,685  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8082 (http)
+2019-03-06 10:18:45,689  INFO Application:57 - Started Application in 4.32 seconds (JVM running for 5.438)
+2019-03-06 10:20:54,468  INFO [/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-06 10:20:54,468  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-06 10:20:54,508  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2019-03-06 10:22:32,410  INFO Application:29 - springBoot容器启动20192206-10:03:410
+2019-03-06 10:22:33,103  INFO Application:48 - Starting Application on DESKTOP-8190VH1 with PID 6444 (C:\Users\Sc\Documents\GitHub\measure\target\classes started by Sc in C:\Users\Sc\Documents\GitHub\measure)
+2019-03-06 10:22:33,103  INFO Application:593 - No active profile set, falling back to default profiles: default
+2019-03-06 10:22:33,546  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:22:33 CST 2019]; root of context hierarchy
+2019-03-06 10:22:33,558  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-06 10:22:34,850  INFO AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-06 10:22:35,520  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8082 (http)
+2019-03-06 10:22:35,552  INFO StandardService:179 - Starting service [Tomcat]
+2019-03-06 10:22:35,554  INFO StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-03-06 10:22:35,668  INFO [/]:179 - Initializing Spring embedded WebApplicationContext
+2019-03-06 10:22:35,668  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2130 ms
+2019-03-06 10:22:35,868  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-06 10:22:35,868  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-06 10:22:35,868  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-06 10:22:35,868  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-06 10:22:35,868  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-06 10:22:35,868  INFO FilterRegistrationBean:258 - Mapping filter: 'originFilter' to: [/*]
+2019-03-06 10:22:36,723  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:22:33 CST 2019]; root of context hierarchy
+2019-03-06 10:22:36,808  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MainsiteErrorController.handleError(javax.servlet.http.HttpServletResponse)
+2019-03-06 10:22:36,808  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/test]}" onto public java.lang.String com.dfjx.measure.MeaController.test()
+2019-03-06 10:22:36,808  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reCol]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reCol()
+2019-03-06 10:22:36,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reLog]}" onto public java.lang.String com.dfjx.measure.MeaController.reLog()
+2019-03-06 10:22:36,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/measures]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMeaSource(java.lang.String[],java.lang.String,java.lang.String)
+2019-03-06 10:22:36,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reMeaSys]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMea()
+2019-03-06 10:22:36,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/meaTest]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reMeaSourceTest()
+2019-03-06 10:22:36,855  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:22:36,855  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:22:36,908  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:22:36,939  WARN AbstractTemplateResolverConfiguration:60 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-06 10:22:37,672  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-03-06 10:22:37,694  INFO Http11NioProtocol:179 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:22:37,694  INFO Http11NioProtocol:179 - Starting ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:22:37,842  INFO NioSelectorPool:179 - Using a shared selector for servlet write/read
+2019-03-06 10:22:37,857  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8082 (http)
+2019-03-06 10:22:37,873  INFO Application:57 - Started Application in 5.332 seconds (JVM running for 6.63)
+2019-03-06 10:22:51,589  INFO [/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-06 10:22:51,589  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-06 10:22:51,621  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2019-03-06 10:27:15,628  INFO Application:29 - springBoot容器启动20192706-10:03:626
+2019-03-06 10:27:16,384  INFO Application:48 - Starting Application on DESKTOP-8190VH1 with PID 13616 (C:\Users\Sc\Documents\GitHub\measure\target\classes started by Sc in C:\Users\Sc\Documents\GitHub\measure)
+2019-03-06 10:27:16,385  INFO Application:593 - No active profile set, falling back to default profiles: default
+2019-03-06 10:27:16,698  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-06 10:27:16,978  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:27:16 CST 2019]; root of context hierarchy
+2019-03-06 10:27:18,457  INFO AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-06 10:27:19,173  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8082 (http)
+2019-03-06 10:27:19,186  INFO StandardService:179 - Starting service [Tomcat]
+2019-03-06 10:27:19,187  INFO StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-03-06 10:27:19,286  INFO [/]:179 - Initializing Spring embedded WebApplicationContext
+2019-03-06 10:27:19,286  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 2344 ms
+2019-03-06 10:27:19,433  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-06 10:27:19,437  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-06 10:27:19,438  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-06 10:27:19,438  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-06 10:27:19,438  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-06 10:27:19,438  INFO FilterRegistrationBean:258 - Mapping filter: 'originFilter' to: [/*]
+2019-03-06 10:27:20,110  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:27:16 CST 2019]; root of context hierarchy
+2019-03-06 10:27:20,168  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MainsiteErrorController.handleError(javax.servlet.http.HttpServletResponse)
+2019-03-06 10:27:20,172  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/test]}" onto public java.lang.String com.dfjx.measure.MeaController.test()
+2019-03-06 10:27:20,172  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reMeaSys]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMea()
+2019-03-06 10:27:20,173  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reCol]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reCol()
+2019-03-06 10:27:20,174  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/measures]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMeaSource(java.lang.String[],java.lang.String,java.lang.String)
+2019-03-06 10:27:20,174  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reLog]}" onto public java.lang.String com.dfjx.measure.MeaController.reLog()
+2019-03-06 10:27:20,174  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/meaTest]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reMeaSourceTest()
+2019-03-06 10:27:20,205  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:27:20,205  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:27:20,241  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:27:20,271  WARN AbstractTemplateResolverConfiguration:60 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-06 10:27:20,994  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-03-06 10:27:21,032  INFO Http11NioProtocol:179 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:27:21,050  INFO Http11NioProtocol:179 - Starting ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:27:21,184  INFO NioSelectorPool:179 - Using a shared selector for servlet write/read
+2019-03-06 10:27:21,222  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8082 (http)
+2019-03-06 10:27:21,230  INFO Application:57 - Started Application in 5.482 seconds (JVM running for 6.837)
+2019-03-06 10:27:21,674  INFO [/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-06 10:27:21,675  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-06 10:27:21,706  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2019-03-06 10:33:16,965  INFO Application:29 - springBoot容器启动20193306-10:03:963
+2019-03-06 10:33:17,576  INFO Application:48 - Starting Application on DESKTOP-8190VH1 with PID 804 (C:\Users\Sc\Documents\GitHub\measure\target\classes started by Sc in C:\Users\Sc\Documents\GitHub\measure)
+2019-03-06 10:33:17,577  INFO Application:593 - No active profile set, falling back to default profiles: default
+2019-03-06 10:33:18,181  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:33:18 CST 2019]; root of context hierarchy
+2019-03-06 10:33:18,186  INFO Version:30 - HV000001: Hibernate Validator 5.3.5.Final
+2019-03-06 10:33:19,231  INFO AutowiredAnnotationBeanPostProcessor:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-03-06 10:33:19,858  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8082 (http)
+2019-03-06 10:33:19,882  INFO StandardService:179 - Starting service [Tomcat]
+2019-03-06 10:33:19,884  INFO StandardEngine:179 - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-03-06 10:33:19,990  INFO [/]:179 - Initializing Spring embedded WebApplicationContext
+2019-03-06 10:33:19,991  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1814 ms
+2019-03-06 10:33:20,135  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2019-03-06 10:33:20,139  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-06 10:33:20,139  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-06 10:33:20,140  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-03-06 10:33:20,140  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-06 10:33:20,141  INFO FilterRegistrationBean:258 - Mapping filter: 'originFilter' to: [/*]
+2019-03-06 10:33:20,731  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3e6ef8ad: startup date [Wed Mar 06 10:33:18 CST 2019]; root of context hierarchy
+2019-03-06 10:33:20,784  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MainsiteErrorController.handleError(javax.servlet.http.HttpServletResponse)
+2019-03-06 10:33:20,787  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/test]}" onto public java.lang.String com.dfjx.measure.MeaController.test()
+2019-03-06 10:33:20,787  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reCol]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reCol()
+2019-03-06 10:33:20,788  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reMeaSys]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMea()
+2019-03-06 10:33:20,788  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/measures]}" onto public com.dfjx.measure.DataResult com.dfjx.measure.MeaController.reMeaSource(java.lang.String[],java.lang.String,java.lang.String)
+2019-03-06 10:33:20,788  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/meaTest]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.Object>> com.dfjx.measure.MeaController.reMeaSourceTest()
+2019-03-06 10:33:20,789  INFO RequestMappingHandlerMapping:543 - Mapped "{[/services/reLog]}" onto public java.lang.String com.dfjx.measure.MeaController.reLog()
+2019-03-06 10:33:20,816  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:33:20,816  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:33:20,850  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-03-06 10:33:20,877  WARN AbstractTemplateResolverConfiguration:60 - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-03-06 10:33:21,273  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2019-03-06 10:33:21,294  INFO Http11NioProtocol:179 - Initializing ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:33:21,319  INFO Http11NioProtocol:179 - Starting ProtocolHandler ["http-nio-8082"]
+2019-03-06 10:33:21,434  INFO NioSelectorPool:179 - Using a shared selector for servlet write/read
+2019-03-06 10:33:21,451  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8082 (http)
+2019-03-06 10:33:21,455  INFO Application:57 - Started Application in 4.381 seconds (JVM running for 5.529)
+2019-03-06 10:48:26,643  INFO [/]:179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-03-06 10:48:26,644  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2019-03-06 10:48:26,676  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
