@@ -54,9 +54,9 @@ public class JsonTree {
 
         List<MeasureEntity> meaList = new ArrayList(); // 树递归
 
-        // 先找到所有的一级菜单
+        // 先找到所有的一级节点
         for (int i = 0; i < treeData.size(); i++) {
-            // 一级菜单父ID为0
+            // 一级节点的父节点为root
             if (treeData.get(i).getMeasurePid().equals("root")) {
                 meaList.add(treeData.get(i));
             }
